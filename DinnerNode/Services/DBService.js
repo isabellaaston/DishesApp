@@ -9,10 +9,6 @@ const connectToDb = (callback) => {
     Client.connect(() => {
         let db = Client.db(dbName);
         callback(db);
-    }).then(() => {
-        return Client.close()
-    }).then(() => {
-
     })
 };
 
